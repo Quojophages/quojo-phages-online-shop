@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quojo Phages Online Shop</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f6fa;color:#222}
+header{background:#101b35;color:white;padding:22px 16px;text-align:center}
+header h1{margin:0;font-size:25px}
+header p{margin:8px 0 0;color:#cbd5e1}
+nav{background:#fff;padding:14px;text-align:center;position:sticky;top:0}
+nav a{color:#172554;text-decoration:none;margin:0 10px;font-weight:bold}
+.hero{padding:55px 20px;text-align:center;background:linear-gradient(135deg,#172554,#2563eb);color:white}
+.hero h2{font-size:30px;margin:0 0 12px}
+.hero p{line-height:1.6}
+.btn{display:inline-block;background:#facc15;color:#172554;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:12px;border:0}
+section{padding:30px 16px;max-width:1000px;margin:auto}
+section h2{text-align:center;color:#172554}
+.categories{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.category{background:white;padding:22px 10px;text-align:center;border-radius:10px;font-weight:bold;box-shadow:0 2px 8px #ddd}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px}
+.product{background:white;padding:18px;border-radius:12px;text-align:center;box-shadow:0 2px 8px #ddd}
+.product .picture{height:110px;background:#e0e7ff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:40px}
+.product h3{font-size:17px}
+.product p{color:#555}
+.product button{background:#172554;color:white;border:0;padding:11px;border-radius:7px;width:100%;font-weight:bold}
+.info{background:white;border-radius:12px;padding:20px;text-align:center;line-height:1.7}
+footer{background:#101b35;color:white;text-align:center;padding:25px 15px;margin-top:25px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>QUOJO PHAGES</h1>
+<p>ONLINE SHOP</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#categories">Categories</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero" id="home">
+<h2>Welcome to Quojo Phages Online Shop!</h2>
+<p>Your trusted online store for quality products at affordable prices.</p>
+<p>Shop conveniently from the comfort of your home.</p>
+<a class="btn" href="#products">Explore Products</a>
+</div>
+
+<section id="categories">
+<h2>Shop by Category</h2>
+<div class="categories">
+<div class="category">👕 Fashion</div>
+<div class="category">📱 Electronics</div>
+<div class="category">🏠 Home & Living</div>
+<div class="category">🧴 Beauty & Personal Care</div>
+<div class="category">🎒 Accessories</div>
+<div class="category">🛍️ Other Products</div>
+</div>
+</section>
+
+<section id="products">
+<h2>Our Products</h2>
+<div class="products">
+<div class="product">
+<div class="picture">🛍️</div>
+<h3>Product 1</h3>
+<p>Contact for price</p>
+<button onclick="order('Product 1')">Order on WhatsApp</button>
+</div>
+<div class="product">
+<div class="picture">🎁</div>
+<h3>Product 2</h3>
+<p>Contact for price</p>
+<button onclick="order('Product 2')">Order on WhatsApp</button>
+</div>
+<div class="product">
+<div class="picture">✨</div>
+<h3>Product 3</h3>
+<p>Contact for price</p>
+<button onclick="order('Product 3')">Order on WhatsApp</button>
+</div>
+</div>
+<p style="text-align:center;color:#666">These are placeholders. We will replace them with your real products, pictures and prices.</p>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<div class="info">
+<p>Have questions or want to place an order?</p>
+<p>Contact Quojo Phages Online Shop on WhatsApp.</p>
+<a class="btn" href="https://wa.me/233XXXXXXXXX">Chat With Us</a>
+</div>
+</section>
+
+<footer>
+<h3>QUOJO PHAGES ONLINE SHOP</h3>
+<p>Quality Products. Affordable Prices.</p>
+<p>© 2026 Quojo Phages. All rights reserved.</p>
+</footer>
+
+<script>
+function order(product){
+const number = "233XXXXXXXXX";
+if(number.includes("X")){
+alert("Our WhatsApp number will be added before the shop goes live.");
+return;
+}
+const message = "Hello Quojo Phages, I want to order " + product;
+window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(message), "_blank");
+}
+</script>
+
+</body>
+</html>
