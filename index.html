@@ -178,7 +178,7 @@ return;
 let total=cart.reduce((sum,p)=>sum+p.price,0);
 let lines=cart.map(p=>p.name+" - GH₵"+p.price.toFixed(2)).join("\n");
 let message="Hello Quojo Phages Online Shop! I want to place this order:\n\n"+lines+"\n\nTotal: GH₵"+total.toFixed(2)+"\n\nPlease confirm availability and delivery details.\nI will make payment through MTN MoMo after confirmation.";
-window.open("https://wa.me/233556716952?text="+encodeURIComponent(message),"_blank");
+window.open("https://wa.me/233556719652?text="+encodeURIComponent(message),"_blank");
 }
 
 showProducts();
