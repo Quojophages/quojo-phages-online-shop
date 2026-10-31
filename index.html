@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,181 +6,186 @@
 <title>Quojo Phages Online Shop</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#fff8f3;color:#292344}
-header{background:linear-gradient(120deg,#ff3984,#ff9e35,#7548dc);color:white;text-align:center;padding:25px 12px}
-header h1{margin:0;font-size:27px}
-nav{background:white;padding:14px 5px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #ddd}
-nav a{color:#7137bb;text-decoration:none;font-weight:bold;margin:0 7px;font-size:13px}
-.hero{text-align:center;padding:35px 15px;background:linear-gradient(135deg,#ffe0ed,#fff0c9,#e5dcff)}
-.hero h2{color:#e84385;font-size:29px}
-.btn{background:#ff438b;color:white;border:0;border-radius:25px;padding:13px 20px;font-weight:bold;text-decoration:none;display:inline-block;cursor:pointer}
-section{padding:22px 14px;max-width:1100px;margin:auto}
-h2{text-align:center;color:#7137bb}
-.search{width:100%;padding:14px;border:2px solid #ff9f43;border-radius:25px;font-size:16px}
-.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-.category{background:white;border-radius:12px;padding:15px 4px;text-align:center;box-shadow:0 2px 8px #ead9ed;font-size:13px;font-weight:bold;cursor:pointer}
-.products{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.product{background:white;padding:10px;border-radius:14px;box-shadow:0 3px 10px #ead9ed;text-align:center}
-.picture{height:105px;background:linear-gradient(135deg,#ffe0ed,#e5dcff,#fff0c9);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:43px}
-.product h3{font-size:15px;min-height:35px}
-.price{color:#ed3981;font-size:18px;font-weight:bold}
-.product button{background:#7137bb;color:white;border:0;border-radius:20px;padding:10px;width:100%;font-weight:bold}
-#cart,#payment{background:#f0e7ff;border-radius:15px;padding:18px;margin-top:15px}
-.cart-row{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid #ddd;padding:10px 0;font-size:14px}
-.remove{color:#e84385;background:none;border:0;font-weight:bold}
-.info{background:#fff0c9;border-radius:15px;padding:20px;text-align:center;line-height:1.7}
-footer{background:#34215d;color:white;text-align:center;padding:25px;margin-top:25px}
-@media(min-width:650px){.products{grid-template-columns:repeat(3,1fr)}.categories{grid-template-columns:repeat(6,1fr)}}
+body{margin:0;font-family:Arial,sans-serif;background:#fff7fb;color:#292033}
+header{background:linear-gradient(120deg,#ff1685,#8b27d9,#ff8b20);color:white;text-align:center;padding:28px 15px}
+header h1{margin:0;font-size:28px}
+header p{margin:9px 0 0}
+nav{background:#fff;padding:12px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #0001}
+nav a{color:#8b27d9;text-decoration:none;font-weight:bold;margin:0 10px}
+.container{max-width:1100px;margin:auto;padding:16px}
+h2{color:#8b27d9}
+.search{width:100%;padding:13px;border:1px solid #ddd;border-radius:10px;font-size:16px;margin-bottom:12px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters button{border:0;background:#eee0f8;color:#6520a0;padding:9px 13px;border-radius:20px;font-weight:bold}
+.filters button.active{background:#8b27d9;color:white}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:13px}
+.product{background:white;border-radius:13px;padding:12px;text-align:center;box-shadow:0 2px 9px #0001}
+.product .pic{font-size:48px;background:#fff0f7;border-radius:10px;padding:15px}
+.product h3{font-size:15px;min-height:36px}
+.price{color:#e51b83;font-weight:bold;font-size:17px}
+.product button,.checkout{border:0;background:#ff1685;color:white;padding:11px;border-radius:8px;font-weight:bold;width:100%;margin-top:7px}
+.cart{background:white;border-radius:13px;padding:16px;margin-top:25px;box-shadow:0 2px 9px #0001}
+.cart-item{display:flex;justify-content:space-between;gap:8px;padding:9px 0;border-bottom:1px solid #eee}
+.remove{border:0;background:#ffe1e1;color:#b00020;border-radius:6px;padding:5px 9px}
+.total{font-size:20px;font-weight:bold;color:#8b27d9;margin-top:14px}
+.info{background:#fff0d9;padding:16px;border-radius:12px;margin-top:20px}
+footer{background:#292033;color:white;text-align:center;padding:22px;margin-top:30px}
+footer a{color:#ffd3ec}
 </style>
 </head>
 <body>
 
 <header>
-<h1>🛍️ QUOJO PHAGES</h1>
-<p>ONLINE SHOP</p>
-<p>✨ Shop More. Smile More. Save More! ✨</p>
+<h1>🛍️ Quojo Phages Online Shop</h1>
+<p>Your one-stop online shopping mall!</p>
+<p>Fashion • Electronics • Beauty • Home • More</p>
 </header>
 
 <nav>
-<a href="#home">HOME</a>
-<a href="#categories">CATEGORIES</a>
-<a href="#products">PRODUCTS</a>
-<a href="#cart">🛒 CART (<span id="count">0</span>)</a>
+<a href="#products">Shop</a>
+<a href="#cart">My Cart</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<div class="hero" id="home">
-<h2>Welcome to Our Shopping Mall! 🌈</h2>
-<p>Discover amazing products at affordable prices.</p>
-<p>Your favourite shopping destination!</p>
-<a href="#products" class="btn">START SHOPPING 🛍️</a>
-</div>
+<div class="container">
+<h2 id="products">Explore Our Products</h2>
+<input class="search" id="search" placeholder="🔍 Search for a product..." oninput="renderProducts()">
 
-<section>
-<input class="search" id="search" placeholder="🔍 Search for products..." oninput="showProducts()">
-</section>
+<div class="filters" id="filters"></div>
+<div class="products" id="productsGrid"></div>
 
-<section id="categories">
-<h2>🌟 SHOP BY CATEGORY</h2>
-<div class="categories">
-<div class="category" onclick="filter('Fashion')">👗 Fashion</div>
-<div class="category" onclick="filter('Electronics')">📱 Electronics</div>
-<div class="category" onclick="filter('Accessories')">👜 Accessories</div>
-<div class="category" onclick="filter('Beauty')">💄 Beauty</div>
-<div class="category" onclick="filter('Home')">🏠 Home</div>
-<div class="category" onclick="filter('All')">🛍️ All</div>
-</div>
-</section>
-
-<section id="products">
-<h2>🔥 OUR PRODUCTS</h2>
-<p style="text-align:center;color:#777;font-size:12px">Sample products and demonstration prices. Actual stock and prices must be confirmed.</p>
-<div class="products" id="productList"></div>
-</section>
-
-<section id="cart">
-<h2>🛒 YOUR SHOPPING CART</h2>
+<section class="cart" id="cart">
+<h2>🛒 Your Shopping Cart</h2>
 <div id="cartItems">Your cart is empty.</div>
-<h3 id="total">Total: GH₵0.00</h3>
-<button class="btn" onclick="checkout()">CONTINUE TO CHECKOUT</button>
+<div class="total" id="total">Total: GH₵0.00</div>
+<button class="checkout" onclick="checkout()">Checkout on WhatsApp</button>
 </section>
 
-<section id="payment">
-<h2>💳 MTN MOBILE MONEY</h2>
-<p><b>Network:</b> MTN MoMo</p>
-<p><b>Payment number:</b> 0556719652</p>
-<p><b>Account name:</b> Emmanuel Obeng</p>
-<p>After placing your order, follow the payment instructions and confirm your payment with the shop before your order is processed.</p>
-<p style="font-size:12px;color:#654">Always verify the recipient name and amount on your MoMo screen before approving payment.</p>
-</section>
-
-<section>
-<div class="info" id="contact">
-<h2>💬 CONTACT US</h2>
-<p>Questions or need assistance?</p>
-<a class="btn" href="https://wa.me/233556716952">CHAT ON WHATSAPP</a>
+<div class="info">
+<h2>💳 MTN Mobile Money</h2>
+<p><strong>Number:</strong> 0556719652</p>
+<p><strong>Account name:</strong> Emmanuel Obeng</p>
+<p>Confirm the account name and amount before approving any payment. Send your payment reference for confirmation. Payments are confirmed manually.</p>
 </div>
-</section>
+
+<div class="info" id="contact">
+<h2>📞 Contact Us</h2>
+<p>WhatsApp: <strong>0556719652</strong></p>
+<a href="https://wa.me/233556719652" target="_blank">
+<button class="checkout">CHAT WITH US ON WHATSAPP</button>
+</a>
+</div>
+</div>
 
 <footer>
-<h3>QUOJO PHAGES ONLINE SHOP</h3>
-<p>Quality Products • Affordable Prices</p>
-<p>Thank you for shopping with us! ❤️</p>
-<p>© 2026 Quojo Phages</p>
+<p>© 2026 Quojo Phages Online Shop</p>
+<p>Thank you for shopping with us ❤️</p>
 </footer>
 
 <script>
-const products=[
-{name:"Women's Fashion",price:150,category:"Fashion",emoji:"👗"},
-{name:"Wireless Headphones",price:120,category:"Electronics",emoji:"🎧"},
-{name:"Ladies Handbag",price:180,category:"Accessories",emoji:"👜"},
-{name:"Smart Watch",price:200,category:"Electronics",emoji:"⌚"},
-{name:"Beauty Set",price:100,category:"Beauty",emoji:"💄"},
-{name:"Kitchen Blender",price:250,category:"Home",emoji:"🍹"}
+const products = [
+{id:1,name:"Women's Fashion",price:150,category:"Fashion",pic:"👗"},
+{id:2,name:"Wireless Headphones",price:120,category:"Electronics",pic:"🎧"},
+{id:3,name:"Ladies Handbag",price:180,category:"Shoes & Bags",pic:"👜"},
+{id:4,name:"Smart Watch",price:200,category:"Electronics",pic:"⌚"},
+{id:5,name:"Kitchen Blender",price:250,category:"Home",pic:"🥤"},
+{id:6,name:"Men's T-Shirt",price:80,category:"Fashion",pic:"👕"},
+{id:7,name:"Jeans Trousers",price:120,category:"Fashion",pic:"👖"},
+{id:8,name:"Sneakers",price:200,category:"Shoes & Bags",pic:"👟"},
+{id:9,name:"School Backpack",price:100,category:"Shoes & Bags",pic:"🎒"},
+{id:10,name:"Bluetooth Speaker",price:150,category:"Electronics",pic:"🔊"},
+{id:11,name:"Phone Charger",price:50,category:"Electronics",pic:"🔌"},
+{id:12,name:"Wristwatch",price:130,category:"Accessories",pic:"⌚"},
+{id:13,name:"Sunglasses",price:60,category:"Accessories",pic:"🕶️"},
+{id:14,name:"Perfume",price:100,category:"Beauty",pic:"香"},
+{id:15,name:"Electric Kettle",price:120,category:"Home",pic:"🫖"},
+{id:16,name:"Cooking Oil",price:80,category:"Groceries",pic:"🫗"},
+{id:17,name:"Rice (5kg)",price:100,category:"Groceries",pic:"🍚"},
+{id:18,name:"Football",price:90,category:"Sports",pic:"⚽"},
+{id:19,name:"Baby Feeding Bottle",price:45,category:"Baby",pic:"🍼"},
+{id:20,name:"Women's Dress",price:150,category:"Fashion",pic:"👚"},
+{id:21,name:"Men's Shoes",price:180,category:"Shoes & Bags",pic:"👞"},
+{id:22,name:"Phone Case",price:40,category:"Electronics",pic:"📱"},
+{id:23,name:"Makeup Kit",price:110,category:"Beauty",pic:"💄"},
+{id:24,name:"Kitchen Set",price:160,category:"Home",pic:"🍽️"}
 ];
 
-let selected="All";
-let cart=[];
+let cart = [];
+let activeCategory = "All";
 
-function showProducts(){
+const categories = ["All",...new Set(products.map(p=>p.category))];
+
+function renderFilters(){
+document.getElementById("filters").innerHTML = categories.map(c =>
+`<button class="${c===activeCategory?'active':''}" onclick="setCategory('${c}')">${c}</button>`
+).join("");
+}
+
+function setCategory(c){
+activeCategory=c;
+renderFilters();
+renderProducts();
+}
+
+function renderProducts(){
 const search=document.getElementById("search").value.toLowerCase();
-const list=document.getElementById("productList");
-list.innerHTML="";
-products.forEach((p,i)=>{
-if((selected==="All"||p.category===selected)&&p.name.toLowerCase().includes(search)){
-list.innerHTML+=`
+const shown=products.filter(p =>
+(activeCategory==="All"||p.category===activeCategory) &&
+p.name.toLowerCase().includes(search)
+);
+document.getElementById("productsGrid").innerHTML=shown.map(p=>`
 <div class="product">
-<div class="picture">${p.emoji}</div>
+<div class="pic">${p.pic}</div>
 <h3>${p.name}</h3>
-<p class="price">GH₵${p.price.toFixed(2)}</p>
-<button onclick="addCart(${i})">ADD TO CART 🛒</button>
-</div>`;
-}
-});
+<div class="price">GH₵${p.price.toFixed(2)}</div>
+<button onclick="addToCart(${p.id})">Add to Cart</button>
+</div>`).join("") || "<p>No products found.</p>";
 }
 
-function filter(category){
-selected=category;
-showProducts();
-document.getElementById("products").scrollIntoView();
+function addToCart(id){
+const item=cart.find(p=>p.id===id);
+if(item){item.quantity++;}
+else{cart.push({...products.find(p=>p.id===id),quantity:1});}
+renderCart();
 }
 
-function addCart(i){
-cart.push(products[i]);
-updateCart();
+function removeFromCart(id){
+cart=cart.filter(p=>p.id!==id);
+renderCart();
 }
 
-function removeCart(i){
-cart.splice(i,1);
-updateCart();
+function renderCart(){
+const area=document.getElementById("cartItems");
+if(cart.length===0){area.innerHTML="Your cart is empty.";}
+else{
+area.innerHTML=cart.map(p=>`
+<div class="cart-item">
+<span>${p.name} × ${p.quantity}<br>GH₵${(p.price*p.quantity).toFixed(2)}</span>
+<button class="remove" onclick="removeFromCart(${p.id})">Remove</button>
+</div>`).join("");
 }
-
-function updateCart(){
-document.getElementById("count").textContent=cart.length;
-let total=0;
-const items=document.getElementById("cartItems");
-if(!cart.length){
-items.textContent="Your cart is empty.";
-}else{
-items.innerHTML=cart.map((p,i)=>{
-total+=p.price;
-return `<div class="cart-row"><span>${p.name} - GH₵${p.price.toFixed(2)}</span><button class="remove" onclick="removeCart(${i})">Remove</button></div>`;
-}).join("");
-}
+const total=cart.reduce((sum,p)=>sum+p.price*p.quantity,0);
 document.getElementById("total").textContent="Total: GH₵"+total.toFixed(2);
 }
 
 function checkout(){
-if(!cart.length){
-alert("Please add products to your cart first.");
+if(cart.length===0){
+alert("Please add a product to your cart first.");
 return;
 }
-let total=cart.reduce((sum,p)=>sum+p.price,0);
-let lines=cart.map(p=>p.name+" - GH₵"+p.price.toFixed(2)).join("\n");
-let message="Hello Quojo Phages Online Shop! I want to place this order:\n\n"+lines+"\n\nTotal: GH₵"+total.toFixed(2)+"\n\nPlease confirm availability and delivery details.\nI will make payment through MTN MoMo after confirmation.";
+let message="Hello Quojo Phages Online Shop! I would like to order:\n\n";
+cart.forEach(p=>{
+message+=p.name+" x "+p.quantity+" = GH₵"+(p.price*p.quantity).toFixed(2)+"\n";
+});
+const total=cart.reduce((sum,p)=>sum+p.price*p.quantity,0);
+message+="\nTotal: GH₵"+total.toFixed(2);
+message+="\n\nPlease confirm availability. Thank you!";
 window.open("https://wa.me/233556719652?text="+encodeURIComponent(message),"_blank");
 }
 
-showProducts();
+renderFilters();
+renderProducts();
+renderCart();
 </script>
 </body>
 </html>
