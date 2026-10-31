@@ -7,32 +7,31 @@
 <title>Quojo Phages Online Shop</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#fff8f1;color:#292344}
-header{background:linear-gradient(120deg,#ff4f91,#ff9f43,#7655e9);color:white;text-align:center;padding:25px 12px}
+body{margin:0;font-family:Arial,sans-serif;background:#fff8f3;color:#292344}
+header{background:linear-gradient(120deg,#ff3984,#ff9e35,#7548dc);color:white;text-align:center;padding:25px 12px}
 header h1{margin:0;font-size:27px}
-header p{margin:8px 0}
-nav{background:white;padding:15px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #ddd}
-nav a{color:#7137bb;text-decoration:none;font-weight:bold;margin:0 8px}
-.hero{padding:40px 18px;text-align:center;background:linear-gradient(135deg,#ffe0ed,#fff0c9,#e5dcff)}
-.hero h2{font-size:30px;color:#e84385}
-.hero p{line-height:1.6}
-.btn{display:inline-block;background:#ff4f91;color:white;padding:13px 22px;border-radius:25px;text-decoration:none;font-weight:bold;border:0}
-.search{width:100%;padding:14px;border:2px solid #ff9f43;border-radius:25px;font-size:16px}
-section{padding:25px 15px;max-width:1100px;margin:auto}
+nav{background:white;padding:14px 5px;text-align:center;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #ddd}
+nav a{color:#7137bb;text-decoration:none;font-weight:bold;margin:0 7px;font-size:13px}
+.hero{text-align:center;padding:35px 15px;background:linear-gradient(135deg,#ffe0ed,#fff0c9,#e5dcff)}
+.hero h2{color:#e84385;font-size:29px}
+.btn{background:#ff438b;color:white;border:0;border-radius:25px;padding:13px 20px;font-weight:bold;text-decoration:none;display:inline-block;cursor:pointer}
+section{padding:22px 14px;max-width:1100px;margin:auto}
 h2{text-align:center;color:#7137bb}
-.categories{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.category{background:white;border-radius:14px;padding:18px;text-align:center;box-shadow:0 3px 10px #ead9ed;cursor:pointer;font-weight:bold}
-.category:active{background:#ffe0ed}
-.products{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.product{background:white;padding:12px;border-radius:15px;box-shadow:0 3px 12px #ead9ed;text-align:center}
-.picture{height:115px;background:linear-gradient(135deg,#ffe0ed,#e5dcff,#fff0c9);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:48px}
-.product h3{font-size:16px}
+.search{width:100%;padding:14px;border:2px solid #ff9f43;border-radius:25px;font-size:16px}
+.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.category{background:white;border-radius:12px;padding:15px 4px;text-align:center;box-shadow:0 2px 8px #ead9ed;font-size:13px;font-weight:bold;cursor:pointer}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.product{background:white;padding:10px;border-radius:14px;box-shadow:0 3px 10px #ead9ed;text-align:center}
+.picture{height:105px;background:linear-gradient(135deg,#ffe0ed,#e5dcff,#fff0c9);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:43px}
+.product h3{font-size:15px;min-height:35px}
 .price{color:#ed3981;font-size:18px;font-weight:bold}
 .product button{background:#7137bb;color:white;border:0;border-radius:20px;padding:10px;width:100%;font-weight:bold}
-.info{background:#fff0c9;padding:22px;border-radius:15px;text-align:center;line-height:1.7}
-#cart{background:#e9ddff;border-radius:14px;padding:18px;margin-top:15px;text-align:center}
+#cart,#payment{background:#f0e7ff;border-radius:15px;padding:18px;margin-top:15px}
+.cart-row{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid #ddd;padding:10px 0;font-size:14px}
+.remove{color:#e84385;background:none;border:0;font-weight:bold}
+.info{background:#fff0c9;border-radius:15px;padding:20px;text-align:center;line-height:1.7}
 footer{background:#34215d;color:white;text-align:center;padding:25px;margin-top:25px}
-@media(min-width:650px){.products{grid-template-columns:repeat(4,1fr)}.categories{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:650px){.products{grid-template-columns:repeat(3,1fr)}.categories{grid-template-columns:repeat(6,1fr)}}
 </style>
 </head>
 <body>
@@ -44,17 +43,17 @@ footer{background:#34215d;color:white;text-align:center;padding:25px;margin-top:
 </header>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#categories">Categories</a>
-<a href="#products">Products</a>
-<a href="#cart">🛒 Cart (<span id="count">0</span>)</a>
+<a href="#home">HOME</a>
+<a href="#categories">CATEGORIES</a>
+<a href="#products">PRODUCTS</a>
+<a href="#cart">🛒 CART (<span id="count">0</span>)</a>
 </nav>
 
 <div class="hero" id="home">
 <h2>Welcome to Our Shopping Mall! 🌈</h2>
 <p>Discover amazing products at affordable prices.</p>
 <p>Your favourite shopping destination!</p>
-<a href="#products" class="btn">Start Shopping 🛍️</a>
+<a href="#products" class="btn">START SHOPPING 🛍️</a>
 </div>
 
 <section>
@@ -62,34 +61,44 @@ footer{background:#34215d;color:white;text-align:center;padding:25px;margin-top:
 </section>
 
 <section id="categories">
-<h2>🌟 Shop by Category</h2>
+<h2>🌟 SHOP BY CATEGORY</h2>
 <div class="categories">
 <div class="category" onclick="filter('Fashion')">👗 Fashion</div>
 <div class="category" onclick="filter('Electronics')">📱 Electronics</div>
-<div class="category" onclick="filter('Home')">🏠 Home & Living</div>
+<div class="category" onclick="filter('Accessories')">👜 Accessories</div>
 <div class="category" onclick="filter('Beauty')">💄 Beauty</div>
-<div class="category" onclick="filter('Accessories')">🎒 Accessories</div>
-<div class="category" onclick="filter('All')">🛍️ All Products</div>
+<div class="category" onclick="filter('Home')">🏠 Home</div>
+<div class="category" onclick="filter('All')">🛍️ All</div>
 </div>
 </section>
 
 <section id="products">
-<h2>🔥 Our Products</h2>
+<h2>🔥 OUR PRODUCTS</h2>
+<p style="text-align:center;color:#777;font-size:12px">Sample products and demonstration prices. Actual stock and prices must be confirmed.</p>
 <div class="products" id="productList"></div>
 </section>
 
 <section id="cart">
-<h2>🛒 Your Shopping Cart</h2>
+<h2>🛒 YOUR SHOPPING CART</h2>
 <div id="cartItems">Your cart is empty.</div>
-<p id="total">Total: GH₵0.00</p>
-<button class="btn" onclick="checkout()">Order on WhatsApp</button>
+<h3 id="total">Total: GH₵0.00</h3>
+<button class="btn" onclick="checkout()">CONTINUE TO CHECKOUT</button>
+</section>
+
+<section id="payment">
+<h2>💳 MTN MOBILE MONEY</h2>
+<p><b>Network:</b> MTN MoMo</p>
+<p><b>Payment number:</b> 0556719652</p>
+<p><b>Account name:</b> Emmanuel Obeng</p>
+<p>After placing your order, follow the payment instructions and confirm your payment with the shop before your order is processed.</p>
+<p style="font-size:12px;color:#654">Always verify the recipient name and amount on your MoMo screen before approving payment.</p>
 </section>
 
 <section>
 <div class="info" id="contact">
-<h2>💬 Contact Us</h2>
-<p>Need help? Have questions?</p>
-<p>Chat with Quojo Phages Online Shop on WhatsApp.</p>
+<h2>💬 CONTACT US</h2>
+<p>Questions or need assistance?</p>
+<a class="btn" href="https://wa.me/233556716952">CHAT ON WHATSAPP</a>
 </div>
 </section>
 
@@ -102,12 +111,12 @@ footer{background:#34215d;color:white;text-align:center;padding:25px;margin-top:
 
 <script>
 const products=[
-{name:"Fashion Item",price:0,category:"Fashion",emoji:"👗"},
-{name:"Electronic Item",price:0,category:"Electronics",emoji:"📱"},
-{name:"Home Product",price:0,category:"Home",emoji:"🏠"},
-{name:"Beauty Product",price:0,category:"Beauty",emoji:"💄"},
-{name:"Fashion Accessory",price:0,category:"Accessories",emoji:"🎒"},
-{name:"Gift Item",price:0,category:"Accessories",emoji:"🎁"}
+{name:"Women's Fashion",price:150,category:"Fashion",emoji:"👗"},
+{name:"Wireless Headphones",price:120,category:"Electronics",emoji:"🎧"},
+{name:"Ladies Handbag",price:180,category:"Accessories",emoji:"👜"},
+{name:"Smart Watch",price:200,category:"Electronics",emoji:"⌚"},
+{name:"Beauty Set",price:100,category:"Beauty",emoji:"💄"},
+{name:"Kitchen Blender",price:250,category:"Home",emoji:"🍹"}
 ];
 
 let selected="All";
@@ -123,8 +132,8 @@ list.innerHTML+=`
 <div class="product">
 <div class="picture">${p.emoji}</div>
 <h3>${p.name}</h3>
-<p class="price">${p.price===0?"Contact for price":"GH₵"+p.price.toFixed(2)}</p>
-<button onclick="addCart(${i})">Add to Cart 🛒</button>
+<p class="price">GH₵${p.price.toFixed(2)}</p>
+<button onclick="addCart(${i})">ADD TO CART 🛒</button>
 </div>`;
 }
 });
@@ -138,23 +147,38 @@ document.getElementById("products").scrollIntoView();
 
 function addCart(i){
 cart.push(products[i]);
-document.getElementById("count").textContent=cart.length;
+updateCart();
+}
+
+function removeCart(i){
+cart.splice(i,1);
 updateCart();
 }
 
 function updateCart(){
+document.getElementById("count").textContent=cart.length;
 let total=0;
-document.getElementById("cartItems").innerHTML=cart.length?
-cart.map(p=>{
+const items=document.getElementById("cartItems");
+if(!cart.length){
+items.textContent="Your cart is empty.";
+}else{
+items.innerHTML=cart.map((p,i)=>{
 total+=p.price;
-return "<p>"+p.name+" - "+(p.price?"GH₵"+p.price.toFixed(2):"Contact for price")+"</p>";
-}).join(""):"Your cart is empty.";
+return `<div class="cart-row"><span>${p.name} - GH₵${p.price.toFixed(2)}</span><button class="remove" onclick="removeCart(${i})">Remove</button></div>`;
+}).join("");
+}
 document.getElementById("total").textContent="Total: GH₵"+total.toFixed(2);
 }
 
 function checkout(){
-if(!cart.length){alert("Please add products to your cart first.");return;}
-alert("Please add your WhatsApp number to the website before accepting orders.");
+if(!cart.length){
+alert("Please add products to your cart first.");
+return;
+}
+let total=cart.reduce((sum,p)=>sum+p.price,0);
+let lines=cart.map(p=>p.name+" - GH₵"+p.price.toFixed(2)).join("\n");
+let message="Hello Quojo Phages Online Shop! I want to place this order:\n\n"+lines+"\n\nTotal: GH₵"+total.toFixed(2)+"\n\nPlease confirm availability and delivery details.\nI will make payment through MTN MoMo after confirmation.";
+window.open("https://wa.me/233556716952?text="+encodeURIComponent(message),"_blank");
 }
 
 showProducts();
